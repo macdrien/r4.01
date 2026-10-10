@@ -67,3 +67,26 @@ async function call(text) {
 
 call("Hello");
 ```
+
+---
+
+## Async / Await
+
+```javascript
+function delayedResolve(prefix) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(prefix + " " + prefix);
+        }, 500);
+    });
+}
+
+async function call(text) {
+    const output = await delayedResolve(text);
+    console.log(output);
+    const secondOutput = delayedResolve(output);
+    console.log(secondOutput);
+}
+
+await call("Hello");
+```
