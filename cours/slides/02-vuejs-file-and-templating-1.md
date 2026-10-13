@@ -11,7 +11,7 @@ footer: Adrien Bouyssou (macdrien.github.io)
 ## Fichier VueJS
 
 ```vue
-<script>                       // Partie JS dynamique
+<script setup>                       // Partie JS dynamique
   import { ref } from 'vue';
   const title = ref('Hello');
 </script>
@@ -28,3 +28,48 @@ footer: Adrien Bouyssou (macdrien.github.io)
 ```
 
 ---
+
+## Variable display
+
+```vue
+<script setup>
+  const title = 'Hello';
+</script>
+
+<template>
+  <h1>{{ title }}</h1>
+  <p>{{ title.length > 0 ? title.toLowerCase() : 'Bonjour' }}</p>
+</template>
+```
+
+---
+
+## Attribute binding
+
+```vue
+<script setup>
+  const image = {
+    url: 'https://www.iut-rodez.fr/sites/default/files/upload/iut/Photos/photoiut0725_1.png',
+    alt: 'Vue de l\'accueil de l\'IUT',
+  };
+</script>
+
+<template>
+  <img v-bind:src="image.url" v-bind:alt="image.alt" />
+  <img :src="image.url" :alt="image.alt" />
+</template>
+```
+
+---
+
+## Loops
+
+```vue
+<script setup>
+  const list = ['Hello', 'Bonjour', 'Hola']
+</script>
+
+<template>
+  <p v-for="item in list" :key="`list-${item}`" >{{ item }}</p>
+</template>
+```
