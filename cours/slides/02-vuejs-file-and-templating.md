@@ -4,7 +4,7 @@ paginate: true
 footer: Adrien Bouyssou (macdrien.github.io)
 ---
 
-# 01 - Fichier VueJS et templating #1
+# 02 - Fichier VueJS et templating
 
 ---
 
