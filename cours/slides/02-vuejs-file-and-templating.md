@@ -29,6 +29,23 @@ footer: Adrien Bouyssou (macdrien.github.io)
 
 ---
 
+## VueJS project
+
+```plaintext
+./
+- package.json
+- package-lock.json
+- index.html
+- public
+    - Documents statiques (favicon, images, etc.)
+- src
+    - main.js
+    - App.vue
+    - Tous les autres composants VueJS 
+```
+
+---
+
 ## Variable display
 
 ```vue
