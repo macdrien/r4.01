@@ -1,7 +1,9 @@
 <script setup>
-import { ref } from "vue";
+import Fullname from "@/Fullname.vue";
+import Firstname from "@/Firstname.vue";
+import {ref} from "vue";
 
-const selected = ref(true);
+const firstname = ref('John');
 </script>
 
 <template>
@@ -11,11 +13,12 @@ const selected = ref(true);
     documentation
   </p>
 
-  <input type="checkbox"
-         :checked="selected"
-         v-on:click="() => selected = !selected"
-   />
-  <p>{{ selected ? 'Hello' : 'Good bye' }}</p>
+  <Firstname
+    :initialFirstname="firstname"
+    @submit="newFirstname => firstname = newFirstname"
+  />
+
+  <Fullname :firstname="firstname" lastname="Doe"/>
 </template>
 
 <style scoped></style>
