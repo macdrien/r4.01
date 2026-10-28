@@ -87,6 +87,8 @@ footer: Adrien Bouyssou (macdrien.github.io)
 </script>
 
 <template>
-  <p v-for="item in list" :key="`list-${item}`" >{{ item }}</p>
+  <ul>
+    <li v-for="item in list" :key="`list-${item}`" >{{ item }}</li>
+  </ul>
 </template>
 ```
